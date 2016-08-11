@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <title>Ordergeb&uuml;hren-Rechner</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <script src="helper.js"></script>
+    <script src="boersenentgelte.js"></script>
+    <script src="main.js"></script>
+
+    <div class="main">
+      <div class="flags-input">
+        <div class="flags">
+          <div>
+            <input type="checkbox" name="flags" id="DAX" value="DAX" onchange="aktualisiereGebuehren()">
+            <label for="DAX">DAX</label>
+          </div>
+          <div>
+            <input type="checkbox" name="flags" id="MDAX" value="MDAX" onchange="aktualisiereGebuehren()">
+            <label for="MDAX">MDAX</label>
+          </div>
+          <div>
+            <input type="checkbox" name="flags" id="TecDAX" value="TecDAX" onchange="aktualisiereGebuehren()">
+            <label for="TecDAX">TecDAX</label>
+          </div>
+          <div>
+            <input type="checkbox" name="flags" id="Ausland" value="Ausland" onchange="aktualisiereGebuehren()">
+            <label for="Ausland">Ausland</label>
+          </div>
+          <br />
+          <br />
+          <div>
+            <input type="checkbox" name="details" id="details" onchange="aktualisiereGebuehren()">
+            <label for="details">Details anzeigen</label>
+          </div>
+        </div>
+
+        <div class="input">
+          <div>
+            <label for="kurs">Kurs in &euro;</label>
+            <input type="text" id="kurs" onkeyup="aktualisiereGebuehren()" />
+          </div>
+          <div>
+            <label for="stueck">St&uuml;ck</label>
+            <input type="text" id="stueck" onkeyup="aktualisiereGebuehren()" />
+          </div>
+
+          <div class="kurswert">
+            <label>Kurswert</label>
+            <span id="kurswert-euro"><span id="kurswert"></span>&euro;</span>
+          </div>
+        </div>
+
+        <div style="clear: both"></div>
+      </div>
+
+      <div id="gebuehrentabelle"></div>
+    </div>
+
+  </body>
+
+</html>
